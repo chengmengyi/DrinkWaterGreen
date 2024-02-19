@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/green_plan">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/green_plan">
+
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="11dp"
+                    android:textColor="#FF26C09E"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clWaterState"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/while_bg_radio"
+                    app:layout_constraintDimensionRatio="h,336:280"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+                    <TextView
+                        android:id="@+id/tvGoal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="33dp"
+                        android:gravity="end"
+                        android:text="Today’s goal"
+                        android:textColor="#FFC4C4C4"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@id/tvGoalValue"
+                        app:layout_constraintStart_toStartOf="@id/ivWater"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvGoalValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="2000ml"
+                        android:textColor="#FF26C09E"
+                        android:textSize="27sp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvGoal"
+                        app:layout_constraintEnd_toStartOf="@id/ivChange"
+                        app:layout_constraintStart_toEndOf="@id/tvGoal"
+                        app:layout_constraintTop_toTopOf="@id/tvGoal" />
+
+                    <ImageView
+                        android:id="@+id/ivChange"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/change_value"
+                        app:layout_constraintBottom_toBottomOf="@id/tvGoalValue"
+                        app:layout_constraintEnd_toEndOf="@id/ivWater"
+                        app:layout_constraintStart_toEndOf="@id/tvGoalValue"
+                        app:layout_constraintTop_toTopOf="@id/tvGoalValue" />
+
+                    <ImageView
+                        android:id="@+id/ivWater"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="95dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="95dp"
+                        android:layout_marginBottom="36dp"
+                        android:background="@drawable/water_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="w,147:175"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvGoalValue" />
+
+                    <ImageView
+                        android:id="@+id/ivFinish"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/water_finish_icon"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@id/ivWater"
+                        app:layout_constraintDimensionRatio="h,256:83"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvDrinkSumValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="300ml(20%)"
+                        android:textColor="#FF26C09E"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivWater" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clTimeDrink"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/while_bg_radio"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clWaterState">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:text="Next Time to Drink"
+                        android:textColor="#FF000000"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/green_bg_radio"
+                        android:paddingStart="16dp"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="7dp"
+                        android:text="17:00"
+                        android:textColor="#FF26C09E"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clDrink"
+                    android:layout_width="0dp"
+                    android:layout_height="249dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/while_bg_radio"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clTimeDrink">
+
+                    <TextView
+                        android:id="@+id/tvDrink"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Select Your Drink"
+                        android:textColor="#FF000000"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvDrinkValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="250ml"
+                        android:textColor="#FF26C09E"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvDrink" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvDrinkValue"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/drink_item" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clAddWater"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/green_start_radio"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/recyclerView">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/add_water"
+                            android:drawablePadding="9dp"
+                            android:text="Add Water"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

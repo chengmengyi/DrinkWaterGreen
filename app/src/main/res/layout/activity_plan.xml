@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/green_plan"
+        tools:context=".PlanActivity">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+            android:gravity="center"
+            android:text="It’s time to drink water"
+            android:textColor="#FF26C09E"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="To learn more about how much water your body needs,we need to know your height and weight information"
+            android:textColor="#FFCCCCCC"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clGender"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/while_bg_radio"
+            app:layout_constraintDimensionRatio="h,3:2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDes">
+
+            <TextView
+                android:id="@+id/tvGender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="23dp"
+                android:text="Select Gender"
+                android:textColor="#FF26C09E"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/male"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="Male"
+                android:textColor="@drawable/text_choice"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvFemale"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+            <TextView
+                android:id="@+id/tvFemale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/female"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="Female"
+                android:textColor="@drawable/text_choice"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvMale"
+                app:layout_constraintTop_toBottomOf="@id/tvGender" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clWeight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/while_bg_radio"
+            app:layout_constraintDimensionRatio="h,4:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clGender">
+
+            <TextView
+                android:id="@+id/tvWeightDes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="My Profile"
+                android:textColor="#FF26C09E"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:textColor="#FF999999"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvWeightDes"
+                app:layout_constraintTop_toBottomOf="@id/tvWeightDes" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/green_bg_radio"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tvWeight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvWeight">
+
+                <EditText
+                    android:id="@+id/etWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="#FFF3FFFE"
+                    android:hint="0.00"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingStart="21dp"
+                    android:textColor="#FF26C09E"
+                    android:textColorHint="#FF26C09E"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Kg"
+                    android:textColor="#FF3B3B3B"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvStart"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:text="Start"
+            android:textColor="#FFFFFFFF"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="@drawable/green_start_radio"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clWeight"
+            app:layout_constraintVertical_bias="0.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

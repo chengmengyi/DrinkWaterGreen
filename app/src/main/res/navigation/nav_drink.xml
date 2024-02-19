@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_drink"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="lsnq.drink.drinkwater.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_recordsFragment"
+            app:destination="@id/records" />
+        <action
+            android:id="@+id/action_homeFragment_to_setFragment"
+            app:destination="@id/set" />
+    </fragment>
+    <fragment
+        android:id="@+id/records"
+        android:name="lsnq.drink.drinkwater.fragment.RecordsFragment"
+        android:label="fragment_records"
+        tools:layout="@layout/fragment_records" >
+        <action
+            android:id="@+id/action_recordsFragment_to_setFragment"
+            app:destination="@id/set" />
+        <action
+            android:id="@+id/action_recordsFragment_to_homeFragment"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/set"
+        android:name="lsnq.drink.drinkwater.fragment.SetFragment"
+        android:label="fragment_set"
+        tools:layout="@layout/fragment_set" >
+        <action
+            android:id="@+id/action_setFragment_to_recordsFragment"
+            app:destination="@id/records" />
+        <action
+            android:id="@+id/action_setFragment_to_homeFragment"
+            app:destination="@id/home" />
+    </fragment>
+</navigation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llBg"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="99"
+            android:gravity="center"
+            android:textColor="@color/dialog_text"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</layout>

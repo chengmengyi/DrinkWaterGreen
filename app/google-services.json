@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "112565352941",
+    "project_id": "waterdaily-3720b",
+    "storage_bucket": "waterdaily-3720b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112565352941:android:fd01afceb742bad4214fe4",
+        "android_client_info": {
+          "package_name": "com.water.daily"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA29VLvCcEorT3vRHRq3Hcf6AvT8aFCMk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

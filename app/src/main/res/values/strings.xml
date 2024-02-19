@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Water Daily</string>
+    <string name="warn">Enter the necessary information to get started.</string>
+</resources>
