@@ -23,7 +23,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.water.daily"
+        applicationId "lsnq.drink.drinkwater"
         minSdk 23
         targetSdk 33
         versionCode 1
@@ -32,18 +32,17 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    signingConfigs {
-        release {
-            keyAlias 'water'
-            keyPassword 'water123'
-            storeFile file('C:/Users/waterkey/waterkey.jks')
-            storePassword 'water123'
-        }
-    }
+//    signingConfigs {
+//        release {
+//            keyAlias 'water'
+//            keyPassword 'water123'
+//            storeFile file('C:/Users/waterkey/waterkey.jks')
+//            storePassword 'water123'
+//        }
+//    }
     buildTypes {
         release {
             minifyEnabled true
-            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
